@@ -1,4 +1,4 @@
-%% figure1
+%% figure2 odor-associated units
 load figure2
 
 for d=1:3
