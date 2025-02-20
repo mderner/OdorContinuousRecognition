@@ -13,9 +13,9 @@ for d=1:4
 subplot(4,1,3)
 y=mean(ys);
 SEM = std(ys)/sqrt(size(ys,1));
-plot_instantaneousFR(x,y,SEM,0);
+plot_instantaneousFR(x,y,SEM,'b');
 xlim([-0.2,2])
 
 subplot(4,2,7)
-density_plot_paper(spk{d});
+density_plot(spk{d});
 end

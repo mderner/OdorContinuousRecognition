@@ -20,17 +20,17 @@ for d=1:3
     subplot(4,1,3)
     y=mean(ys);
     SEM = std(ys)/sqrt(size(ys,1));
-    plot_instantaneousFR(x,y,SEM,0);
+    plot_instantaneousFR(x,y,SEM,'b');
     hold on
     [ys,x]=convolve_spikes(spikes2(101:200));
     y=mean(ys);
     SEM = std(ys)/sqrt(size(ys,1));
-    plot_instantaneousFRgreen(x,y,SEM,0);
+    plot_instantaneousFR(x,y,SEM,'g');
     hold off
     xlim([-0.2,2])
     ylim([0,6])
     legend('Control','','','Odor')
     
     subplot(4,2,7)
-    density_plot_paper(spk);
+    density_plot(spk);
 end
